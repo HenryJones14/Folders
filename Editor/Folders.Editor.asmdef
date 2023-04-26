@@ -1,0 +1,18 @@
+{
+    "name": "Folders.Editor",
+    "rootNamespace": "Folders",
+    "references": [
+        "GUID:14b24b42b6fd4a94ea9002525f2d01b2"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

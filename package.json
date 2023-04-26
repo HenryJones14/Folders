@@ -1,0 +1,25 @@
+{
+	"name": "com.gameboxinteractive.folders",
+	"version": "1.0.0",
+
+
+
+	"description": "Simple plugin to add folders",
+	"displayName": "Folders",
+	"unity": "2021.3",
+
+
+
+	"author": {
+		"name": "Gamebox Interactive",
+		"email": "support@gameboxinteractive.net",
+		"url": "https://www.gameboxinteractive.net/"
+	},
+	"changelogUrl": "https://www.google.com/",
+	"dependencies": { },
+	"documentationUrl": "https://www.google.com/",
+	"hideInEditor": false,
+	"keywords": [
+		"Folders"
+	]
+}
