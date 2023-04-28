@@ -83,54 +83,6 @@ namespace Folders
 				}
 			}
 		}
-
-		/*private List<Type> GetDependencies(Type Root)        // Dependency graveyard
-		{
-			List<Type> types = new List<Type>();
-
-			foreach (RequireComponent required in Attribute.GetCustomAttributes(Root, typeof(RequireComponent), true))
-			{
-				if (required.m_Type0 != null && required.m_Type0 != typeof(Transform) && required.m_Type0 != typeof(RectTransform))
-				{
-					GetDependencies(required.m_Type0, ref types);
-					types.Add(required.m_Type0);
-				}
-				if (required.m_Type1 != null && required.m_Type1 != typeof(Transform) && required.m_Type1 != typeof(RectTransform))
-				{
-					GetDependencies(required.m_Type1, ref types);
-					types.Add(required.m_Type1);
-				}
-				if (required.m_Type2 != null && required.m_Type2 != typeof(Transform) && required.m_Type2 != typeof(RectTransform))
-				{
-					GetDependencies(required.m_Type2, ref types);
-					types.Add(required.m_Type2);
-				}
-			}
-
-			return types;
-		}
-
-		private void GetDependencies(Type Root, ref List<Type> Types)
-		{
-			foreach (RequireComponent required in Attribute.GetCustomAttributes(Root, typeof(RequireComponent), true))
-			{
-				if (required.m_Type0 != null)
-				{
-					GetDependencies(required.m_Type0, ref Types);
-					Types.Add(required.m_Type0);
-				}
-				if (required.m_Type1 != null)
-				{
-					GetDependencies(required.m_Type1, ref Types);
-					Types.Add(required.m_Type1);
-				}
-				if (required.m_Type2 != null)
-				{
-					GetDependencies(required.m_Type2, ref Types);
-					Types.Add(required.m_Type2);
-				}
-			}
-		}*/
 #endif
 	}
 }
