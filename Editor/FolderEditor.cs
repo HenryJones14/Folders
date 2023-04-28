@@ -187,6 +187,11 @@ namespace Folders
 
 		public static void UpdateSelectedTool()
 		{
+			if (!_isInitialized)
+			{
+				_lastTool = Tools.current;
+			}
+
 			if (_folderSelected)
 			{
 				if (_lastTool == Tool.None)
