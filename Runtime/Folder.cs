@@ -17,21 +17,12 @@ namespace Folders
 {
 #if UNITY_EDITOR
 	[DisallowMultipleComponent, ExecuteAlways]
-    public class Folder : MonoBehaviour, IProcessSceneWithReport
 #else
 	[DisallowMultipleComponent]
-	public class Folder : MonoBehaviour
 #endif
+	public class Folder : MonoBehaviour
 	{
 #if UNITY_EDITOR
-		public int callbackOrder { get { return 0; } }
-		public void OnProcessScene(Scene Scene, BuildReport Report)
-		{
-			foreach (Folder folder in FindObjectsOfType<Folder>())
-			{
-				DestroyImmediate(folder);
-			}
-		}
 
 		private void Awake()
 		{
@@ -85,4 +76,19 @@ namespace Folders
 		}
 #endif
 	}
+
+#if UNITY_EDITOR
+	public class FolderCleanup : IProcessSceneWithReport
+	{
+		public int callbackOrder { get { return 0; } }
+		public void OnProcessScene(Scene Scene, BuildReport Report)
+		{
+			foreach (Folder folder in Object.FindObjectsOfType<Folder>())
+			{
+				Object.DestroyImmediate(folder);
+			}
+		}
+	}
+#endif
+
 }
